@@ -5,7 +5,7 @@ import (
 	"math/rand"
 )
 
-func Random() int {
+func Random_point() int {
 	return rand.Intn(36)
 }
 
@@ -22,7 +22,7 @@ func Chan_le(money float32) float32 {
 
 	fmt.Println("Chọn số chẵn(0) hoặc lẻ(1): ")
 	fmt.Scan(&x)
-	var point = Random()
+	var point = Random_point()
 	fmt.Print("Số trúng thưởng: ", point)
 	if point%2 == 0 && x == 0 {
 		fmt.Print("You wwiiinnn")
@@ -57,7 +57,7 @@ func Dat_cuoc(money float32) float32 {
 			break
 		}
 	}
-	var a int = rand.Intn(36) // so trung thuong
+	var a int = Random_point() // so trung thuong
 	fmt.Printf("Số trúng thưởng : %v\n", a)
 	if a == x {
 		fmt.Println("You win")
